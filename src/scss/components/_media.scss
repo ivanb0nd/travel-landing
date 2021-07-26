@@ -1,0 +1,387 @@
+@import '../mixins';
+
+
+@media screen and (max-width: 340px) {
+  .place__container {
+    grid-template-columns: max-content;
+    justify-content: center;
+  }
+
+  .experience__content {
+    padding: 0;
+  }
+
+  .experience__overlay:nth-child(1) {
+    width: 190px;
+  }
+
+  .experience__overlay:nth-child(2) {
+    width: 80px;
+  }
+
+  .home__info {
+    width: 190px;
+    padding: 1rem;
+  }
+
+  .nav__menu {
+    width: 100%;
+    border-left: none;
+  }
+
+  body.dark-theme .nav__menu {
+    border-left: none;
+  }
+
+  .experience__img,
+  .video__container {
+    padding: 0;
+  }
+
+  .subscribe__btn {
+    padding: 1rem 1rem;
+  }
+}
+
+@media screen and (min-width: 568px) {
+  .video__container {
+    display: grid;
+    grid-template-columns: .6fr;
+    justify-content: center;
+  }
+
+  .place__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .subscribe__form {
+    width: 470px;
+    margin: 0 auto;
+  }
+}
+
+@include mobile {
+
+  .nav {
+    height: calc(var(--header-size) + 1.5rem);
+  }
+
+  .nav__link {
+    color: var(--white-color);
+    text-transform: initial;
+    padding: 0.8rem 0;
+
+    &:hover {
+      color: var(--white-color);
+    }
+  }
+
+  .nav__item {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav__dark {
+    position: initial;
+  }
+
+  .nav__menu {
+    column-gap: 2rem;
+    display: flex;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    column-gap: 4rem;
+  }
+
+  body.dark-theme .nav__menu {
+    border-left: none;
+  }
+
+  .nav__btn {
+    display: none;
+  }
+
+  .nav__dark {
+    border: none;
+
+    &:hover .nav__dark-icon {
+      fill: var(--white-color-hover);
+    }
+  }
+
+  .nav__dark-icon {
+    fill: var(--white-color);
+    transition: fill 0.3s ease-in-out 0s;
+    width: 23px;
+    height: 23px;
+  }
+
+  .header--scroll .nav__link {
+    &:hover {
+      color: var(--text-color-hover);
+    }
+
+    &:hover::before {
+      background-color: var(--text-color-hover);
+    }
+  }
+
+  .header--scroll .nav__logo {
+    &:hover {
+      color: var(--text-color-hover);
+    }
+  }
+
+  .header--scroll .nav__dark {
+    &:hover .nav__dark-icon {
+      fill: var(--text-color-hover);
+    }
+  }
+
+  body.dark-theme .header--scroll .nav__dark {
+
+    .nav__dark-icon {
+      fill: var(--text-color);
+    }
+
+    &:hover .nav__dark-icon {
+      fill: var(--white-color);
+    }
+  }
+
+  body.dark-theme .header--scroll .nav__link {
+    &:hover {
+      color: var(--white-color-hover);
+    }
+
+    &:hover::before {
+      background-color: var(--white-color-hover);
+    }
+  }
+
+  body.dark-theme .header--scroll .nav__logo {
+    color: var(--white-color);
+
+    &:hover {
+      color: var(--white-color-hover);
+    }
+  }
+
+  body.dark-theme .header--scroll .nav__link {
+    &:hover {
+      color: var(--white-color);
+    }
+  }
+
+  .nav__link {
+    &:hover {
+      color: var(--white-color-hover);
+    }
+
+    &:hover::before {
+      background-color: var(--white-color-hover);
+    }
+  }
+
+  .nav__link--active::before {
+    background-color: var(--white-color);
+  }
+
+  .header--scroll .nav__link {
+    color: var(--text-color);
+  }
+
+  .header--scroll .nav__link--active {
+    color: var(--title-color);
+  }
+
+  .header--scroll .nav__link--active::before {
+    background-color: var(--title-color);
+  }
+
+  .header--scroll .nav__dark-icon {
+    fill: var(--title-color);
+  }
+
+  .nav__logo {
+    transition: color 0.3s ease-in-out 0s;
+
+    &:hover {
+      color: var(--white-color-hover);
+    }
+  }
+
+  .section {
+    padding: 7rem 0 2rem;
+  }
+
+  .home__container {
+    grid-template-rows: 1fr .5fr;
+  }
+
+  .home__data {
+    align-self: center;
+  }
+
+  .home__social {
+    align-self: flex-end;
+    margin-bottom: 3rem;
+    flex-direction: row;
+    column-gap: 2.5rem;
+  }
+
+  .home__info {
+    bottom: 3rem;
+  }
+
+  .about__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .about__title,
+  .about__data {
+    text-align: initial;
+  }
+
+  .about__title {
+    margin-bottom: var(--mb-1-5);
+  }
+
+
+  .tours__container {
+    width: 610px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tours__container,
+  .place__container {
+    padding-top: 2rem;
+  }
+
+  .experience__overlay:nth-child(1) {
+    width: 363px;
+    height: auto;
+    margin-right: 4rem;
+  }
+
+  .experience__overlay:nth-child(2) {
+    width: 160px;
+    height: 210px;
+  }
+
+  .subscribe__bg {
+    padding: 0;
+  }
+
+  .subscribe__container {
+    padding: 3.5rem 0;
+  }
+
+  .subscribe__input {
+    padding: 0 .5rem;
+  }
+
+  .footer__copyright {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@include tablet {
+
+  .home__container {
+    grid-template-rows: 2fr .5fr;
+  }
+
+  .home__info {
+    display: grid;
+    width: 328px;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+  }
+
+  .home__info-overlay {
+    width: 100%;
+    height: 100px;
+  }
+
+  .home__info-img {
+    width: 240px;
+  }
+
+  .home__info-title {
+    font-size: var(--normal-font-size);
+  }
+
+  .about__img-one {
+    width: 240px;
+  }
+
+  .about__img-two {
+    width: 290px;
+  }
+
+  .tours__card {
+    width: 237px;
+    height: auto;
+  }
+
+  .tours__container {
+    width: 700px;
+  }
+
+  .tours__data {
+    left: 1.5rem;
+    bottom: 2rem;
+  }
+
+  .tours__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-0-5);
+  }
+
+  .experience__content {
+    margin: var(--mb-1) 0;
+    column-gap: 3.5rem;
+  }
+
+  .experience__overlay:nth-child(1) {
+    width: 463px;
+    margin-right: 7rem;
+  }
+
+  .experience__overlay:nth-child(2) {
+    width: 220px;
+    height: 300px;
+    top: 3rem;
+  }
+
+  .video__container {
+    grid-template-columns: .7fr;
+  }
+
+  .video__description {
+    padding: 0 8rem;
+  }
+
+  .place__container {
+    gap: 3rem 2rem;
+    grid-template-columns: repeat(3, 250px);
+  }
+
+  .place__card,
+  .place__img {
+    height: 350px;
+  }
+
+}
+
+@include desktop {
+  .container {
+    max-width: 1300px;
+  }
+}

@@ -1,0 +1,27 @@
+<section class="video section">
+  <h2 class="section__title">Видио тур</h2>
+
+  <div class="container video__container">
+    <p class="video__description">Посмотрите больше различных мест в наших видео </p>
+
+    <div class="video__content">
+      <video muted="muted" id="video-file" loop>
+        <source src="video/video.mp4" type="video/mp4">
+
+        <source src="video/video.webm" type="video/webm">
+      </video>
+
+      <button class="button video__btn" id="video-button">
+        <span class="video__btn-icon" id="video-icon">
+          <svg class="icon-play">
+            <use xlink:href="img/sprite.svg#play"></use>
+          </svg>
+
+          <svg class="icon-pause">
+            <use xlink:href="img/sprite.svg#pause"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</section>

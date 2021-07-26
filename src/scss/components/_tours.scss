@@ -1,0 +1,41 @@
+.tours {
+
+  &__card {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__img {
+    transition: transform var(--img-transition);
+
+    &:hover {
+      transform: var(--img-scale);
+    }
+  }
+
+  &__data {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1rem;
+  }
+
+  &__title {
+    color: var(--white-color);
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-25);
+  }
+
+  &__description {
+    color: var(--white-color);
+    display: block;
+    font-size: var(--small-font-size);
+  }
+}

@@ -1,0 +1,124 @@
+@import "mixins";
+
+.home {
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(.75);
+  }
+
+  &__container {
+    position: relative;
+    padding-top: var(--header-size);
+    height: 100vh;
+    align-content: center;
+    row-gap: 3rem;
+  }
+
+  &__data-subtitle {
+    display: block;
+    font-weight: var(--font-semi-bold);
+    margin-bottom: var(--mb-0-75);
+    color: var(--white-color);
+  }
+
+  &__data-title {
+    margin: 0;
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-2-5);
+    color: var(--white-color);
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+
+  &__social-link {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    fill: var(--white-color);
+    transition: fill 0.3s ease-in-out 0s;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &:hover {
+      fill: var(--white-color-hover);
+    }
+  }
+
+  &__info {
+    position: absolute;
+    background-color: var(--first-color);
+    display: flex;
+    padding: 1.5rem 1rem;
+    align-items: center;
+    column-gap: .5rem;
+    right: var(--container-indent);
+    bottom: 1rem;
+    width: 230px;
+  }
+
+  &__info-title {
+    color: var(--white-color);
+    display: block;
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: var(--mb-0-75);
+  }
+
+  &__info-btn {
+    font-size: var(--smaller-font-size);
+
+  }
+
+  &__info-overlay {
+    overflow: hidden;
+  }
+
+  &__info-img {
+    width: 145px;
+    transition: var(--img-transition);
+
+    &:hover {
+      transform: var(--img-scale);
+    }
+  }
+}
+
+.more-link {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem;
+  padding: 0.6rem .5rem;
+  margin-left: -.5rem;
+
+  &__text {
+    color: var(--white-color);
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    fill: var(--white-color);
+
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

@@ -13,6 +13,12 @@ if (menuBtn) {
   });
 }
 
+window.addEventListener('scroll', function() {
+  if(navMenu.classList.contains('nav__menu--show')) {
+    navMenu.classList.remove('nav__menu--show');
+  }
+});
+
 if (navLinks) {
   let closeMenu = function () {
     navMenu.classList.remove('nav__menu--show');
